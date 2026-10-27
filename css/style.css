@@ -211,3 +211,18 @@ summary{transition:color .3s}summary:hover{color:var(--gold2)}
 @keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
 .fab{position:fixed}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
+
+/* v3: logo oficial, áreas em grade, consumidor em largura total */
+.brand__img{width:44px;height:44px;object-fit:contain;flex:none}
+.footer__logo{width:min(260px,100%);height:auto}
+.footer__top p{margin-top:1rem}
+.areas{grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);overflow:hidden}
+.area{background:var(--g1);border:0}
+.area:hover{background:#0c231c}
+.area--wide{grid-column:1/-1}
+.area--wide ul{columns:2;column-gap:56px;margin-bottom:2rem}
+.area--wide li{break-inside:avoid}
+.area--wide>p{max-width:640px;min-height:0}
+.area ul{flex:none}
+.area--wide li:nth-child(5){border-bottom:1px solid var(--line)}
+@media(max-width:1060px){.areas{grid-template-columns:1fr}.area--wide ul{columns:1}}
